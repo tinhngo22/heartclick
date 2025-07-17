@@ -8,3 +8,58 @@
 *::after{
     box-sizing:border-box;
 }
+
+.container{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    position: relative;
+    overflow:hidden;
+}
+
+/* emoji styling */
+.emoji{
+    all: unset;
+    font-size: 200px;
+    cursor:pointer;
+    position: absolute;
+}
+
+.emoji:hover{
+    transform: scale(1.05);
+}
+
+/* particle animation */
+.particle{
+    position:absolute;
+    font-size: 20px;
+    
+}
+
+.fall{
+    animation: fall 5s;
+}
+
+.spit{
+    animation: spit 2s ease-out forwards;
+}
+@keyframes spit{
+    0%{
+
+    }
+    100%{
+        transform: translate(var(--translate-x, 10vw),-55vh) rotate(90deg);
+    }
+}
+
+@keyframes fall{
+    0%{
+
+    }
+
+    100%{
+        transform: translateY(110vh) rotate(180deg);
+    }
+}
