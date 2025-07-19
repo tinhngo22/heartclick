@@ -9,6 +9,18 @@
     box-sizing:border-box;
 }
 
+input{
+    border-radius: 20px;
+    padding: 10px;
+    border-width: 1px;
+}
+
+#input-form button{
+    border-radius: 20px;
+    padding: 10px;
+    border-width: 1px;
+}
+
 .container{
     height:100vh;
     display:flex;
@@ -39,7 +51,7 @@
 }
 
 .fall{
-    animation: fall 5s;
+    animation: fall 7s ease-in forwards;
 }
 
 .spit{
@@ -56,10 +68,28 @@
 
 @keyframes fall{
     0%{
-
+        /* set inital location to random location */
+        top:0;
+        left:var(--initial-x, 5vw);
     }
 
     100%{
-        transform: translateY(110vh) rotate(180deg);
+
+
+        transform: translate(var(--translate-x, 10vw),200vh) rotate(180deg);
     }
+}
+
+
+.timer{
+    font-size:30px;
+    font-family: "TikTok Sans";
+    font-weight: 450;
+}
+
+.record{
+    position:absolute;
+    font-family: "TikTok Sans";
+    font-size: 40px;
+    font-weight: 500;
 }
