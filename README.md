@@ -1,3 +1,3 @@
-#HeartClick
-A little project I did to learn JavaScript.
+# HeartClick
+A little project I made to learn JavaScript.
 
